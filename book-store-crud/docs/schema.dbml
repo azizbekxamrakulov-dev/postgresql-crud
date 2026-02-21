@@ -1,0 +1,21 @@
+/*
+==================================================
+  FILE: schema.dbml
+  PROJECT: Book Store CRUD
+  DATABASE: book_store_db
+  DESCRIPTION: Database schema definition (DBML)
+==================================================
+*/
+
+Project book_store_db {
+  database_type: "PostgreSQL"
+  note: "Simple CRUD project for managing books"
+}
+
+Table books {
+  id int [pk, increment, note: "Primary Key"]
+  title varchar(100) [not null, note: "Book title"]
+  author varchar(50) [not null, note: "Author name"]
+  price numeric(6,2) [not null, note: "Book price"]
+  is_available boolean [default: true, note: "Availability status"]
+}

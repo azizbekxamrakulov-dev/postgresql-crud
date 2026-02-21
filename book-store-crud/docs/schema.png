@@ -1,0 +1,10 @@
+```mermaid
+erDiagram
+    BOOKS {
+        INT id PK
+        VARCHAR title
+        VARCHAR author
+        NUMERIC price
+        BOOLEAN is_available
+    }
+```
